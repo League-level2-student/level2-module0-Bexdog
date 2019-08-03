@@ -27,17 +27,23 @@ public class _00_ArrayCheatSheet {
 			age[i]=randy;
 		}
 				//8. without printing the entire array, print only the smallest number in the array
-		for (int age1 : age) {
-		     System.out.println(age1);
+		//code below is bubblesort, rember that in place of 50 you use the length of your array
+		for(int h = 0;h<50;h++) {
+		for(int i = 0;i<age.length-1;i++) {
+			if(age[i]>age[i+1]) {
+				int temp = age[i+1];
+				age[i+1]=age[i];
+				age[i]=temp;
+				
+			}			
 		}
-		for (int i=0;i<age.length;i++) {
-	
-			
 		}
+		System.out.println(age[0]);
 		//9 print the entire array to see if step 8 was correct
 		for (int i=0;i<age.length;i++) {
 		     System.out.println(age[i]);
 		}
 		//10. print the largest number in the array.
+		System.out.println(age[49]);
 	}
 }
